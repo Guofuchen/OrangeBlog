@@ -7,6 +7,8 @@
   },
   // 指定保存时自动格式化
   "editor.formatOnSave": true,
+  // 关闭粘贴的内容自动格式化
+  "editor.formatOnPaste": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -17,9 +19,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {

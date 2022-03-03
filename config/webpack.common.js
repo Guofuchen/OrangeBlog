@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolve = (relativePath) => path.resolve(appDirectory, relativePath);
 
+const IMAGE_INLINE_SIZE_LIMIT = 1000;
+
 module.exports = {
   /**
    * 告知 webpack 为目标(target)指定一个环境:
@@ -50,6 +52,19 @@ module.exports = {
             loader: require.resolve('ts-loader'),
           },
         ],
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(bmp|gif|jpeg?g|png)$/,
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: IMAGE_INLINE_SIZE_LIMIT,
+          },
+        },
       },
     ],
   },

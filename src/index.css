@@ -1,0 +1,10 @@
+body {
+  font-family: pingfang SC, helvetica neue, arial, hiragino sans gb, microsoft yahei ui,
+    microsoft yahei, simsun, sans-serif !important;
+  min-height: 100vh;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #181818;
+}

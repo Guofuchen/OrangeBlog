@@ -12,7 +12,7 @@ module.exports = merge(common, {
     compress: true,
     open: true,
     host: process.env.HOST || '127.0.0.1',
-    port: parseInt(process.env.PORT, 10) || 3000,
+    port: parseInt(process.env.PORT, 10) || 8888,
     hot: true,
     historyApiFallback: true, // 所有的404都到index.html
     proxy: {
